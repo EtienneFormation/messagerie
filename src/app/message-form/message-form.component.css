@@ -1,0 +1,22 @@
+input, textarea {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  width: calc(100% - 20px);
+
+  padding: 5px;
+
+  border-radius: 10px;
+  border: none;
+}
+
+.message {
+  height: 5em;
+  resize: none;
+}
+
+input[type=submit] {
+  width: calc(100% - 10px);
+  height: 2em;
+  background: #2d681f;
+}

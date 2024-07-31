@@ -1,0 +1,11 @@
+.container {
+  background-color: #2c4596;
+  border : solid 1px #20316e;
+  border-radius: 10px;
+  margin : 10px 10px 0 10px;
+  padding : 10px 10px 10px 10px;
+}
+
+.container>p {
+  font-weight: bold;
+}

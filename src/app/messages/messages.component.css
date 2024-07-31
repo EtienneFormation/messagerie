@@ -1,0 +1,17 @@
+.container {
+  height: 100%;
+  max-height: calc(83vh - 58px);
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.container > :first-child {
+  margin-top: auto !important;
+}
+
+.container > p {
+  margin: auto;
+  font-weight: bold;
+}

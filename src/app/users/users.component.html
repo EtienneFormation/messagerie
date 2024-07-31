@@ -1,0 +1,7 @@
+<div class="container">
+  <h3>Utilisateur·ice·s</h3>
+  <div *ngFor="let user of users">
+    {{user}}
+  </div>
+  <p *ngIf="users.length == 0">Y a quelqu'un ?</p>
+</div>

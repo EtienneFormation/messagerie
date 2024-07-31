@@ -1,0 +1,39 @@
+app-header {
+  display: block;
+  height: 40px;
+  max-height: 40px;
+}
+
+app-users {
+  display: inline-block;
+  width: 20vw;
+}
+
+.holder {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.chat-area {
+  display: inline-flex;
+  width: calc(80vw - 12px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: calc(100vh - 40px - 19px);
+}
+
+.chat-area>app-messages {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  flex: 5 1 0;
+}
+
+.chat-area>app-message-form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  flex: 1 1 0;
+}
