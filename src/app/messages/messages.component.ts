@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import {AfterViewInit, Component, DoCheck, OnInit} from '@angular/core';
 import {NgForOf, NgIf} from "@angular/common";
 import {MessageItemComponent} from "../message-item/message-item.component";
+import {MessagesService} from "../services/messages.service";
 
 @Component({
   selector: 'app-messages',
@@ -14,11 +15,9 @@ import {MessageItemComponent} from "../message-item/message-item.component";
   styleUrl: './messages.component.css'
 })
 export class MessagesComponent {
-  messages = [
-    {author : "Etienne", content : "Hello tout le monde 1!", date : new Date()},
-    {author : "Etienne", content : "Hello tout le monde !", date : new Date()},
-    {author : "Etienne", content : "Hello tout le monde !", date : new Date()},
-    {author : "Etienne", content : "Hello tout le monde !", date : new Date()},
-    {author : "Etienne", content : "Hello tout le monde !", date : new Date()}
-  ];
+  messages : {author: string, content: string, date: Date}[] = [];
+
+  constructor(private service : MessagesService) {
+    this.messages = this.service.messages;
+  }
 }

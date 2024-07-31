@@ -1,5 +1,5 @@
 <div class="container">
-  <p>{{message.author}} ({{message.date}})</p>
+  <p>{{message.author}} ({{message.date | date : "dd/MM/yyyy HH:mm"}})</p>
   <div class="content">
     {{message.content}}
   </div>

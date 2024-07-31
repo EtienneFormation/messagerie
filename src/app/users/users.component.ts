@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {NgForOf, NgIf} from "@angular/common";
+import {MessagesService} from "../services/messages.service";
 
 @Component({
   selector: 'app-users',
@@ -12,6 +13,12 @@ import {NgForOf, NgIf} from "@angular/common";
   styleUrl: './users.component.css'
 })
 export class UsersComponent {
+  users;
+
+  constructor(private service : MessagesService) {
+    this.users = this.service.authors;
+  }
+  /*
   users = [
     "Pierrick",
     "Rémy",
@@ -41,5 +48,5 @@ export class UsersComponent {
     "Matthew",
     "Benjamin",
     "Etienne"
-  ];
+  ];*/
 }
