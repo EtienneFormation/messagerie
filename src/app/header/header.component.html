@@ -1,3 +1,7 @@
 <nav>
   <h1>{{title}}</h1>
+  <div class="actions">
+    <a routerLink="/inscription" *ngIf="!sessionStorage.getItem('user')">S'inscrire</a>
+    <a (click)="deconnexion()" *ngIf="sessionStorage.getItem('user')">Déconnexion</a>
+  </div>
 </nav>

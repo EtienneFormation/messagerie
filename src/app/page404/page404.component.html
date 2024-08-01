@@ -1,0 +1,6 @@
+<div class="container">
+  <img ngSrc="/etienne.png" alt="ma bouille" height="252" width="252"/>
+  <h1>Perdu !</h1>
+  <a routerLink="/messagerie" *ngIf="sessionStorage.getItem('user')">Retour à la messagerie</a>
+  <a routerLink="/" *ngIf="!sessionStorage.getItem('user')">Retour à l'accueil</a>
+</div>

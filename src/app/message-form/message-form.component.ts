@@ -12,15 +12,17 @@ import {MessagesService} from "../services/messages.service";
   styleUrl: './message-form.component.css'
 })
 export class MessageFormComponent {
-  username: string = "";
   content: string = "";
 
   constructor(private service : MessagesService) {
   }
 
   sendMessage() {
+    let username = sessionStorage.getItem("user");
+    if (!username || !this.content) return;
+
     this.service.addMessage({
-      author : this.username,
+      author : username,
       content : this.content,
       date : new Date()
     });

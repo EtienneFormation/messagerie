@@ -7,3 +7,27 @@ nav {
 
   background-color: #1e1f22;
 }
+
+.actions {
+  position: absolute;
+  right: 20px;
+  height: 40px;
+  transition: .2s all;
+  padding : 0 10px;
+}
+
+.actions>* {
+  height: 40px;
+  line-height: 40px;
+  text-decoration: none;
+  color: #d6d7db;
+  font-weight: bold;
+}
+
+.actions:hover {
+  background-color: #d6d7db;
+}
+
+.actions:hover>* {
+  color: #1e1f22;
+}
