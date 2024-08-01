@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
+import {Message} from "../interfaces/message";
 
 @Injectable({
   providedIn: 'root'
 })
 export class MessagesService {
-  messages : {author : string, content : string, date : Date}[] = [];
+  messages : Message[] = [];
   authors : string[] = [];
 
   constructor() { }
 
-  addMessage(message: any) {
+  addMessage(message: Message) {
     this.messages.push(message);
     if (!this.authors.includes(message.author))
       this.authors.push(message.author);
